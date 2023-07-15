@@ -157,8 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotateSpeed: 0.3
   _speed: 10
-  strVoucher: 
-  strImage: 
+  numplay: 3
 --- !u!61 &175701047
 BoxCollider2D:
   m_ObjectHideFlags: 0

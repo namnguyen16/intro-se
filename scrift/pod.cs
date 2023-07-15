@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class pod : MonoBehaviour
 {
@@ -34,9 +35,9 @@ public class pod : MonoBehaviour
 
     private int[] _gift;
 
-    private int randomNum;
+    public static int randomNum;
 
-    private int numplay = 3;
+    public static int numplay = num.k;
 
     private int voucher;
 
@@ -45,6 +46,8 @@ public class pod : MonoBehaviour
     public static string strVoucher;
 
     public static string strImage;
+
+    private int thay;
 
 
     UIManager m_ui;
@@ -120,6 +123,7 @@ public class pod : MonoBehaviour
                         _flagrod = false;
                         Destroy(_rod.gameObject);
                         _slowDown = 0;
+                         SceneManager.LoadScene("con Scene");
                         if (randomNum > 10 && randomNum < 14)
                         {
                             randomNum = randomNum - 10;
@@ -151,6 +155,8 @@ public class pod : MonoBehaviour
                 }    
                 break;
         }
+
+        num.NUM();
         
     }
 
