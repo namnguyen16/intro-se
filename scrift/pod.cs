@@ -96,6 +96,10 @@ public class pod : MonoBehaviour
                         m_ui.SetNumPlay(numplay + " lượt");
                         podState = PodState.SHOOT;// nhấn space chuyển qua shoot
                     }
+                    else
+                    {
+                        SceneManager.LoadScene("input");
+                    }
 
                 
                 _angle += _rotateSpeed; //tăng góc quay

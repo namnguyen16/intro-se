@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class num : MonoBehaviour
 {
-    public static int k = 3;
+    public static int k = 100;
 
 
     public static List<string> objectList = new List<string>() ;
@@ -19,7 +19,6 @@ public class num : MonoBehaviour
         foreach (string obj in objectList)
         {
             Destroy(GameObject.Find(obj));
-           
         }
     }
     

@@ -8,8 +8,15 @@ public class ScenceChange : MonoBehaviour
 {
     public string scencename;
 
-     public void OnButtonClicked()
+
+    public void OnButtonClicked()
     {
         SceneManager.LoadScene(scencename);
     }
+
+    public void OnButtonClicked2()
+    {
+        SceneManager.LoadScene("input");
+    }
+
 }
