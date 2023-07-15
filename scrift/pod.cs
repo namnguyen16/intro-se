@@ -29,7 +29,7 @@ public class pod : MonoBehaviour
 
     private Vector3 _Origin;
 
-    private Transform _rod;
+    public static Transform _rod;
 
     private bool _flagrod;
 
@@ -47,7 +47,8 @@ public class pod : MonoBehaviour
 
     public static string strImage;
 
-    private int thay;
+    public static string nameObj;
+
 
 
     UIManager m_ui;
@@ -64,7 +65,6 @@ public class pod : MonoBehaviour
         _slowDown = _rod.GetComponent<rod>().slowDown;
         _gift = _rod.GetComponent<rod>().gift;
         randomNum = _gift[Random.Range(0, _gift.Length - 1)];
-        print(randomNum);
 
         podState = PodState.REMIND;
     }
@@ -84,6 +84,7 @@ public class pod : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        num.delete();
         switch (podState)
         {
             case PodState.ROTATION:
@@ -121,9 +122,9 @@ public class pod : MonoBehaviour
                     if (_rod != null)
                     {
                         _flagrod = false;
-                        Destroy(_rod.gameObject);
                         _slowDown = 0;
-                         SceneManager.LoadScene("con Scene");
+                        num.objectList.Add(_rod.gameObject.name);
+                        SceneManager.LoadScene("con Scene");
                         if (randomNum > 10 && randomNum < 14)
                         {
                             randomNum = randomNum - 10;
