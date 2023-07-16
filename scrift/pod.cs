@@ -141,6 +141,7 @@ public class pod : MonoBehaviour
                         {
                             image = randomNum;
                             strImage = strImage + "\n" + "hình " + image ;
+                            playername.database.Add("hình " + image);
                         }
 
                          if (randomNum > 20 && randomNum < 28)
@@ -149,6 +150,7 @@ public class pod : MonoBehaviour
                             voucher = randomNum;
                             strVoucher = strVoucher + "\n" + "Voucher  " + voucher + "0%" ;
                             randomNum = randomNum + 20;
+                            playername.database.Add("Voucher  " + voucher + "0%");
                         }
 
 

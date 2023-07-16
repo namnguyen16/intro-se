@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class num : MonoBehaviour
 {
-    public static int k = 100;
+    public static int k = 3;
 
 
     public static List<string> objectList = new List<string>() ;
